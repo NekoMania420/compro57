@@ -3,11 +3,11 @@
 int main()
 {
 	int id;
-	char firstName[50], lastName[50];
+	char name[100];
 	unsigned int totalCost, youPay;
 
 	scanf("%d", &id);
-	scanf("%s %s", firstName, lastName);
+	scanf(" %[^\n]s", name);
 	scanf("%u", &totalCost);
 	scanf("%u", &youPay);
 
@@ -23,7 +23,7 @@ int main()
 
 	/* Output */
 	printf("                              Transaction ID: %03d\n", id);
-	printf("- %s %s -\n", firstName, lastName);
+	printf("- %s -\n", name);
 	printf("Change: %d\n", change);
 	printf("+-----------------------------------------------+\n");
 	printf("| Coin\\Bank |    1|    5|   10|   50|  100|  500|\n");
