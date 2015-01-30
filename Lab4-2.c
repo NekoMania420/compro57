@@ -2,15 +2,15 @@
 
 int main()
 {
-	int a, b;
-	scanf("%d %d", &a, &b);
+	long a, b;
+	scanf("%ld %ld", &a, &b);
 	if (a==b)
 	{
-		printf("%d + %d = %d\n", a, b, a+b);
+		printf("%ld + %ld = %ld\n", a, b, a+b);
 	}
 	else
 	{
-		printf("%d - %d = %d\n", a, b, a-b);
+		printf("%ld - %ld = %ld\n", a, b, a-b);
 	}
 
 	return 0;
