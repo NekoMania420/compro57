@@ -28,8 +28,10 @@ int main()
 		}
 	}
 
-	printf("Sum of %d even numbers = %d\n", numType[0][1], numType[0][0]);
-	printf("Sum of %d odd numbers = %d\n", numType[1][1], numType[1][0]);
+	char suf[][50] = {"number", "numbers"};
+
+	printf("Sum of %d even %s = %d\n", numType[0][1], suf[numType[0][1] >= 2], numType[0][0]);
+	printf("Sum of %d odd %s = %d\n", numType[1][1], suf[numType[1][1] >= 2], numType[1][0]);
 
 	return 0;
 }
