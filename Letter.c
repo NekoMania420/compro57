@@ -7,7 +7,9 @@ int main()
 	char text[100];
 	scanf("%s", text);
 
-	for (int i = 0; i < strlen(text); i++)
+	int i;
+
+	for (i = 0; i < strlen(text); i++)
 	{
 		if (islower(text[i]))
 		{
