@@ -10,9 +10,7 @@ int main()
 {
 	int a, b;
 	scanf("%d %d", &a, &b);
-
 	possiblePow(a, b);
-
 	return 0;
 }
 
@@ -28,10 +26,8 @@ void possiblePow(int a, int b)
 			p++;
 		}
 	}
-
 	int *numListNoRepeat = (int *)malloc(10000);
 	int pNR = 0;
-
 	for(i = 0; i < p; i++)
 	{
 		if (isRepeat(numList, numList[i], i + 1, p))
@@ -40,7 +36,6 @@ void possiblePow(int a, int b)
 			pNR++;
 		}
 	}
-
 	for (i = 0; i < pNR; i++)
 	{
 		printf("%d ", sort(numListNoRepeat, pNR)[i]);
@@ -57,7 +52,6 @@ int isRepeat(int *nList, int n, int start, int end)
 			return 0;
 		}
 	}
-
 	return 1;
 }
 
@@ -76,6 +70,5 @@ int *sort(int *nList, int len)
 			}
 		}
 	}
-
 	return nList;
 }

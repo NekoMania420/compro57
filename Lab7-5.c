@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+
 int isDigitUnique(int , int );
 int isPrime(int );
 char *toString(int );
+
 int main()
 {
 	int num;
@@ -25,6 +27,7 @@ int main()
 	found ? 0 : puts("N/A");
 	return 0;
 }
+
 int isDigitUnique(int n, int lim)
 {
 	int i, j;
@@ -47,6 +50,7 @@ int isDigitUnique(int n, int lim)
 	}
 	return 1;
 }
+
 int isPrime(int n)
 {
 	int i;
@@ -59,6 +63,7 @@ int isPrime(int n)
 	}
 	return 1;
 }
+
 char *toString(int n)
 {
 	char *temp = (char *)malloc(100);

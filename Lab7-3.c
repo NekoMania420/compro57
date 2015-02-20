@@ -6,9 +6,7 @@ int main()
 {
 	int num;
 	scanf("%d", &num);
-
 	printf("%d", step(num));
-
 	return 0;
 }
 
