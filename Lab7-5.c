@@ -11,6 +11,7 @@ int main()
 {
 	int num;
 	scanf("%d", &num);
+
 	int i, found = 0;
 	for (i = floor(pow(10, num)) - 1; i >= floor(pow(10, num - 1)); i--)
 	{
@@ -18,36 +19,40 @@ int main()
 		{
 			if (isPrime(i))
 			{
-				printf("%d\n", i);
 				found = 1;
 				break;
 			}
 		}
 	}
-	found ? 0 : puts("N/A");
+
+	found ? printf("%d\n", i) : puts("N/A");
+
 	return 0;
 }
 
 int isDigitUnique(int n, int lim)
 {
 	int i, j;
-	for (i = 0; i < strlen(toString(n)); i++)
+	char *s = toString(n);
+	for (i = 0; i < strlen(s); i++)
 	{
-		if (!((int)toString(n)[i] - '0' >= 1 && (int)toString(n)[i] - '0' <= lim))
+		if (!((int)s[i] - '0' >= 1 && (int)s[i] - '0' <= lim))
 		{
 			return 0;
 		}
 	}
-	for (i = 0; i < strlen(toString(n)); i++)
+
+	for (i = 0; i < strlen(s); i++)
 	{
-		for (j = i + 1; j < strlen(toString(n)); j++)
+		for (j = i + 1; j < strlen(s); j++)
 		{
-			if (toString(n)[i] == toString(n)[j])
+			if (s[i] == s[j])
 			{
 				return 0;
 			}
 		}
 	}
+
 	return 1;
 }
 
@@ -61,12 +66,14 @@ int isPrime(int n)
 			return 0;
 		}
 	}
+
 	return 1;
 }
 
 char *toString(int n)
 {
-	char *temp = (char *)malloc(100);
+	char *temp = (char *)malloc(1000 * sizeof(char));
 	sprintf(temp, "%d", n);
+
 	return temp;
 }
