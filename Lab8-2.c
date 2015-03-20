@@ -31,7 +31,7 @@ char *bin(int n)
     char *ptr = str;
     char temp[2];
 
-    for (int i = 0; ; i++)
+    while (1)
     {
         sprintf(temp, "%d", n % 2);
         strcat(str, temp);
@@ -61,7 +61,7 @@ char *reverse(char *s)
     char *ptr = str;
     char temp[2];
 
-    for (int i = strlen(s) - 1, j = 0; i >= 0; i--, j++)
+    for (int i = strlen(s) - 1; i >= 0; i--)
     {
         sprintf(temp, "%c", s[i]);
         strcat(str, temp);
