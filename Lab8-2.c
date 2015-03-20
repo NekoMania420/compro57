@@ -31,16 +31,12 @@ char *bin(int n)
     char *ptr = str;
     char temp[2];
 
-    while (1)
+    do
     {
         sprintf(temp, "%d", n % 2);
         strcat(str, temp);
-        if (n <= 1)
-        {
-            break;
-        }
         n /= 2;
-    }
+    } while (n != 0);
 
     return reverse(ptr);
 }
