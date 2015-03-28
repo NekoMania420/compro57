@@ -1,26 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
-void strFib(char , char , int );
-
-int main(int argc, char *argv[])
+int main()
 {
-    char ch1, ch2;
+    char ch1[2], ch2[2];
     int pos;
 
-    scanf("%c %c %d", &ch1, &ch2, &pos);
+    scanf("%s %s %d", ch1, ch2, &pos);
 
-    strFib(ch1, ch2, pos);
-
-    return 0;
-}
-
-void strFib(char ch1, char ch2, int pos)
-{
     char strArr[1000][1000];
 
-    sprintf(strArr[0], "%c", ch1);
-    sprintf(strArr[1], "%c", ch2);
+    strcpy(strArr[0], ch1);
+    strcpy(strArr[1], ch2);
 
     if (pos > 2)
     {
@@ -31,4 +22,6 @@ void strFib(char ch1, char ch2, int pos)
     }
 
     puts(strArr[pos - 1]);
+
+    return 0;
 }
